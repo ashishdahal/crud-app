@@ -26,24 +26,32 @@ if (error) {
   //res.status(200).json({ message: 'Created'} )
 };
 
-const update = (req, res) => {
-  const 
-}
-
-/*const addUser = (req,res)=>{
+const edit = (req, res) => {
 
   const id = parseInt(req.params.id);
-
-  pool.query('INSERT TO information WHERE user_id =$1',[id],(error,results)=>{
-    if (error){
-      throw error("couldn't load");
+  const query = `UPDATE information SET name = 'upAshish', email = 'upash@upash.com', joined_date = '1111' WHERE user_id = 1`
+  pool.query(query,(error,results)=>{
+    if (error) {
+      throw error
     }
-  res.status(200).send(`User deleted with ID: ${id}`);
+    res.status(200).send(`User updated : ${res.results}`)
+  })
+}
 
-  } )
-}*/
+const remove = (req, res) => {
+  const id = parseInt(req.params.id);
+  const query = `DELETE FROM information WHERE user_id = 1`
+  pool.query(query,(error,results)=>{
+    if (error) {
+      throw error
+    }
+    res.status(200).send(`User deleted : ${res}`)
+  })
+}
 
 module.exports = {
   getInfo,
-  create
+  create,
+  edit,
+  remove
 };

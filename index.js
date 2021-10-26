@@ -18,7 +18,8 @@ app.get('/',(req,res)=>{
 
 app.get('/users', users.getInfo);
 app.post('/users/create', users.create);
-//app.get('/users/new',database.getInfo);
+app.put('/users/edit',users.edit);
+app.delete('/users/delete',users.remove);
 
 
 app.listen(port,()=>{
