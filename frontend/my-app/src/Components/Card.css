@@ -1,0 +1,54 @@
+
+
+.upper-container{
+
+  height:100px;
+  background:linear-gradient(to left, blue,orange)
+
+}
+
+
+.lower-container{
+
+  background:linear-gradient(to right,lightblue,lightgreen);
+  height: 68%;
+  padding-top: 25%;
+  text-align: center;
+
+}
+
+.lower-container h1,h2,h3,h4,p{
+   
+  color:black;
+  font-size: 1.55rem;
+  font-style:italic;
+  margin:10%;
+  padding:0;
+}
+
+.lower-container h1{
+  color:chocolate
+}
+
+.lower-container h2{
+
+font-size:1.25rem; 
+color:blueviolet ;
+
+}
+
+.lower-container h3{
+  font-size: 1.05rem;
+  color:darkmagenta
+}
+
+.lower-container h4{
+  font-size: 1rem;
+  color:orangered
+}
+
+.lower-container p{
+
+  color:blue;
+  font-size: 1rem;
+}

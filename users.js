@@ -10,7 +10,9 @@ const getInfo = (req,res)=>{
   pool.query("SELECT * FROM information ORDER BY user_id ASC",(error,results)=>{if (error){
     throw error
   }
-  res.status(200).json(results.rows)
+  res.status(200).json(results.rows);
+  const dataobtained = JSON.parse(JSON.stringify(results.rows));
+  
 })
 };
 
@@ -40,7 +42,7 @@ const edit = (req, res) => {
 
 const remove = (req, res) => {
   const id = parseInt(req.params.id);
-  const query = `DELETE FROM information WHERE user_id = 1`
+  const query = `DELETE FROM information WHERE user_id = 4`
   pool.query(query,(error,results)=>{
     if (error) {
       throw error
